@@ -1,5 +1,5 @@
 import { PokemonData } from "../context/pokemon_context";
-import { getAverageRGB } from "../utils/image";
+import { getAverageRGB, getDominantRGB } from "../utils/image";
 import { get } from "./generic";
 
 export interface GeneralListInterface{
@@ -39,7 +39,7 @@ export interface PokemonApiData{
 }
 
 async function parseApiData(data: PokemonApiData): Promise<PokemonData>{
-    const averageColor = await getAverageRGB(data.sprites.front_shiny)
+    const dominantColor = await getDominantRGB(data.sprites.front_shiny)
     return {
         id: data.id,
         name: data.name,
@@ -52,7 +52,7 @@ async function parseApiData(data: PokemonApiData): Promise<PokemonData>{
         exp: data.base_experience,
         sprite: data.sprites.front_shiny,
         types: data.types.map(type => type.type.name),
-        averageColor: averageColor
+        backgroundColor: dominantColor
     }
 }
 

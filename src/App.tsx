@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { PokemonProvider } from './context/pokemon_context'
+import { PokemonList } from './pages/PokemonList'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <PokemonProvider>
-      oi
+      <Routes>
+        <Route path="/list" element={<PokemonList/>}/>
+      </Routes>
     </PokemonProvider>
   )
 }

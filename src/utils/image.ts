@@ -1,3 +1,5 @@
+import ColorThief from 'colorthief'
+
 export function getAverageRGB(src: string): Promise<string> {
   const imgEl = new Image();
   imgEl.src = src;
@@ -51,3 +53,19 @@ export function getAverageRGB(src: string): Promise<string> {
     };
   });
 }
+
+
+export function getDominantRGB(src: string): Promise<string> {
+  const imgEl = new Image();
+  imgEl.src = src;
+  imgEl.crossOrigin = window.origin
+
+  return new Promise<string>((resolve) => {
+    imgEl.onload = () => {
+      const colorthief = new ColorThief()
+      const rgb = colorthief.getColor(imgEl)
+      resolve(`rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`);
+    };
+  });
+}
+

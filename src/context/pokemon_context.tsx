@@ -13,7 +13,7 @@ export interface PokemonData{
     spDefense: number
     abilities: string[]
     types: string[]
-    averageColor: string
+    backgroundColor: string
 }
 
 export interface PokemonContextInterface{
@@ -44,7 +44,7 @@ export const PokemonProvider = ({children}: ProviderProps) => {
     const [pokemonList, setPokemonList] = useState<PokemonData[]>([])
     const [page, setPage] = useState(1)
     const [count, setCount] = useState(0)
-    const rows = useRef(10)
+    const rows = useRef(9)
 
     useEffect(() => {
         getPokemonList(page)
