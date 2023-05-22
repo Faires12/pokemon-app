@@ -23,3 +23,31 @@
     justify-content: center;
     margin-top: 15px;
 }
+
+.filtersDiv{
+    width: 75%;
+    display: flex;
+}
+
+@media (max-width: 1200px)
+{
+  .container
+   {
+        width: 800px;
+   }
+}
+
+@media (max-width: 750px)
+{
+  .container
+   {
+        width: 100%;
+   }
+   .list{
+        justify-content: center;
+   }
+   .filtersDiv{
+        width: 100%;
+   }
+}
+

@@ -1,0 +1,46 @@
+.container{
+    position: relative;
+    margin-left: 15px;
+}
+
+.main{
+    width: 150px;
+    border-radius: 6px;
+    background-color: #F5F5F5;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 3px 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropbox{
+    position: absolute;
+    width: 150px;
+    background-color: #F5F5F5;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6px;
+    z-index: 50;
+}
+
+.checkDiv{
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.checkDivCheckbox{
+    border-radius: 0px;
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.checkDivText{
+    margin-left: 5px;
+    font-size: 14px;
+}

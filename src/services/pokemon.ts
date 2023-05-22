@@ -21,6 +21,11 @@ export interface PokemonApiData{
     }[]
     sprites: {
         front_shiny: string
+        other: {
+            'official-artwork': {
+                front_default: string
+            }
+        }
     }
     stats: {
         base_stat: number
@@ -39,7 +44,7 @@ export interface PokemonApiData{
 }
 
 async function parseApiData(data: PokemonApiData): Promise<PokemonData>{
-    const dominantColor = await getDominantRGB(data.sprites.front_shiny)
+    const dominantColor = await getDominantRGB(data.sprites.other['official-artwork'].front_default)
     return {
         id: data.id,
         name: data.name,
@@ -50,7 +55,7 @@ async function parseApiData(data: PokemonApiData): Promise<PokemonData>{
         spAttack: data.stats.filter(stat => stat.stat.name === "special-attack")[0].base_stat,
         spDefense: data.stats.filter(stat => stat.stat.name === "special-defense")[0].base_stat,
         exp: data.base_experience,
-        sprite: data.sprites.front_shiny,
+        sprite: data.sprites.other['official-artwork'].front_default,
         types: data.types.map(type => type.type.name),
         backgroundColor: dominantColor
     }

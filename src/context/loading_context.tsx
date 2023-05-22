@@ -34,7 +34,7 @@ export function LoadingProvider({ children }: Props) {
 
   return (
     <LoadingContext.Provider value={{ show, hide }}>
-      {open && <Loader/>}
+      {open > 0 && <Loader/>}
       {children}
     </LoadingContext.Provider>
   );
