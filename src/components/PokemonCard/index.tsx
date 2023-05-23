@@ -1,20 +1,14 @@
-import { PokemonData } from '../../context/pokemon_context'
+import { PokemonData, typeColor } from '../../context/pokemon_context'
 import styles from './styles.module.css'
 
 interface Props {
   pokemonData: PokemonData
+  handleClick(): void
 }
 
-export const PokemonCard = ({pokemonData}: Props) => {
-  const typeColor : {[key: string]: string} = {
-    grass: '#73D677',
-    fire: '#B22222',
-    water: '#1E90FF',
-    poison: '#9932CC',
-    flying: '#FFF44F'
-  }
+export const PokemonCard = ({pokemonData, handleClick}: Props) => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main} onClick={handleClick}>
       <div className={styles.infos}>
         <p className={styles.name}>{pokemonData.name}</p>
         <div className={styles.stats}>

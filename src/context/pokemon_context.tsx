@@ -58,6 +58,14 @@ export interface Filter{
     selected: boolean
 }
 
+export const typeColor : {[key: string]: string} = {
+    grass: '#73D677',
+    fire: '#B22222',
+    water: '#1E90FF',
+    poison: '#9932CC',
+    flying: '#FFF44F'
+  }
+
 export const PokemonProvider = ({children}: ProviderProps) => {
     const loading = useLoading()
     const [pokemonList, setPokemonList] = useState<PokemonData[]>([])

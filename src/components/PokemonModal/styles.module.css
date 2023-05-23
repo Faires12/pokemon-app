@@ -1,0 +1,246 @@
+.container{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.main{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 75;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 50000px rgba(0,0,0,.4);
+}
+
+.closeX{
+  position: absolute;
+  right: 5px;
+  top: -50px;
+  font-size: 40px;
+  font-weight: 900px;
+  cursor: pointer;
+}
+
+.imgDiv{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+.imgDivTop{
+    font-size: 20px;
+    color: #FDFDFD;
+    margin-top: 5px;
+    display: none;
+}
+
+.image{
+    height: 300px;
+}
+
+.imgDivBottom{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.type{
+    color: #212121;
+    padding: 3px 10px;
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.typeMargin{
+    color: #212121;
+    padding: 3px 10px;
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.18);
+    font-size: 12px;
+    border-radius: 6px;
+    margin-left: 15px;
+    z-index: 15;
+}
+
+.infosDiv{
+    width: 60%;
+    padding: 15px;
+}
+
+.infosDivHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.infosDivHeaderTitle{
+    color: #FDFDFD;
+    font-size: 30px;
+}
+
+.infosDivHeaderInfos{
+    display: flex;
+    align-items: center;
+}
+
+.infosDivHeaderGeneration{
+    color: #FDFDFD;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.infosDivHeaderId{
+    width: 40px;
+    height: 40px;
+    background-color: #F2CB07;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.infosDivHeaderTypes{
+    display: none;
+}
+
+.infosDivAbilities{
+    width: 65%;
+    background-color: #FDFDFD;
+    color: black;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+.infosDivGeneralStats{
+    width: 100%;
+    background-color: #FDFDFD;
+    color: black;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 6px;
+    display: flex;
+}
+
+.infosDivGeneralStatsStat{
+    width: 50%;
+}
+
+.infosDivGeneralStatsStatBold{
+    font-weight: bold;
+}
+
+.infosDivGeneralStatsStatHealthBar{
+    width: 90%;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #64D368;
+    margin-top: 3px;
+}
+
+.infosDivGeneralStatsStatExpBar{
+    width: 90%;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #F2B807;
+    margin-top: 3px;
+}
+
+.infosDivStats{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.infosDivStat{
+    width: 23%;
+    background-color: #FDFDFD;
+    color: black;
+    padding: 15px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.infosDivStatValue{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.infosDivStatName{
+    color: #4B4B4B;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+@media (max-width: 800px)
+{
+  .main{
+    width: 100%;
+    flex-direction: column;
+    border-radius: 0px;
+    top: 0;
+    left: 0;
+    transform: none;
+    padding: 7px;
+    overflow-y: auto;
+    max-height: 100%;
+  }
+  .closeX{
+    left: 15px;
+    top: 15px;
+  }
+  .imgDiv{
+    width: 100%;
+    align-items: center;
+  }
+  .imgDivTop{
+    display: block;
+  }
+  .imgDivBottom{
+    display: none;
+  }
+  .infosDiv{
+    width: 100%;
+    padding: 0px;
+  }
+  .infosDivHeaderTitle{
+    display: none;
+  }
+  .infosDivHeaderGeneration{
+    font-size: 16px;
+  }
+  .infosDivHeaderId{
+    width: 30px;
+    height: 30px;
+  }
+  .infosDivHeaderTypes{
+    display: flex;
+  }
+  .typeMargin{
+    margin-left: 10px;
+  }
+  .infosDivAbilities{
+    width: 100%;
+  }
+}
