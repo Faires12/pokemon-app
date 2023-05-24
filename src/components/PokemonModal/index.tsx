@@ -10,7 +10,6 @@ interface Props{
 export const PokemonModal = ({pokemonData, handleClose}: Props) => {
 
     useEffect(() => {
-        window.scroll(0, 0)
         document.body.style.overflow = 'hidden'
 
         return () => {

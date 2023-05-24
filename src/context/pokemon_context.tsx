@@ -64,7 +64,7 @@ export const typeColor : {[key: string]: string} = {
     water: '#1E90FF',
     poison: '#9932CC',
     flying: '#FFF44F'
-  }
+}
 
 export const PokemonProvider = ({children}: ProviderProps) => {
     const loading = useLoading()
@@ -156,16 +156,16 @@ export const PokemonProvider = ({children}: ProviderProps) => {
 
     return (
         <PokemonContext.Provider value={{
-        pokemonList: getFilteredList(), 
-        pokemonCount: count, 
-        searchValue: searchValue,
-        types: types,
-        abilities: abilities,
-        handleGetPrevPage, 
-        handleGetNextPage,
-        handleChangeSearchValue,
-        handleChangeTypeFilter,
-        handleChangeAbilityFilter
+            pokemonList: getFilteredList(), 
+            pokemonCount: count, 
+            searchValue: searchValue,
+            types: types,
+            abilities: abilities,
+            handleGetPrevPage, 
+            handleGetNextPage,
+            handleChangeSearchValue,
+            handleChangeTypeFilter,
+            handleChangeAbilityFilter
         }}>
             {children}
         </PokemonContext.Provider>
