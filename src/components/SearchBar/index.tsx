@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import styles from './styles.module.css'
 
 interface Props{
@@ -7,8 +6,6 @@ interface Props{
 }
 
 export const SearchBar = ({value, onChange}: Props) => {
-    const timeoutRef = useRef<NodeJS.Timeout>()
-
     return (
         <input type='text' 
             value={value} 
